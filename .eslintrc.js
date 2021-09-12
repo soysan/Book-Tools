@@ -8,6 +8,7 @@ module.exports = {
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
+        "plugin:react/jsx-runtime",
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",
@@ -25,5 +26,10 @@ module.exports = {
     "rules": {
         'react/react-in-jsx-scope': 'off',
         'react/jsx-filename-extension': [1, {extensions: ['.js','.jsx','.ts','.tsx']}]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 };
