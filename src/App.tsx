@@ -1,12 +1,8 @@
-import React from 'react';
-import './App.css';
+import React, { VFC } from 'react';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      Hello
-    </div>
-  );
+const App: VFC = () => {
+  return <div className="App">Hello</div>;
 }
 
 export default App;
