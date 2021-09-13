@@ -1,18 +1,20 @@
 import React, { VFC } from 'react';
+import UserData from './templates/UserData';
+import BTools from '../logic/functions';
 
 type Props = {
   command: string;
 };
 
-const CommandList: VFC<Props> = (props: { command: string }) => {
-  const commandArr = props.command.split(' ');
+const CommandList: VFC<Props> = ({ command }: Props) => {
+  const commandArr = command.trimRight().split(' ');
+  const validCommand = BTools.ValidateCommandArr(commandArr);
+  console.log(validCommand);
   return (
     <>
-      <ul>
         {commandArr.map((val) => (
-          <li key={val}>{val}</li>
+          <p key={val}><UserData />: {val}</p>
         ))}
-      </ul>
     </>
   );
 };
